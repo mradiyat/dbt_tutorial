@@ -4,4 +4,4 @@ select
     status as payment_status,
     amount / 100 as aud_amount
 
-from raw.stripe.payment
+from {{ source('stripe', 'payment')}}
